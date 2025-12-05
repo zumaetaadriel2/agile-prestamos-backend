@@ -16,6 +16,9 @@ app.use('/prestamos', prestamosRoutes);
 app.use('/pagos', pagosRoutes);
 app.use('/caja', cajaRoutes);
 
+console.log('ENV MYSQLHOST:', process.env.MYSQLHOST);
+console.log('ENV MYSQLPORT:', process.env.MYSQLPORT);
+
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`API escuchando en puerto ${PORT}`);
